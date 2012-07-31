@@ -1,0 +1,31 @@
+include COPYING.BSD
+include CONTRIBUTING.md
+include COPYING.LESSER
+include MANIFEST.in
+include README.rst
+include setup.cfg.template
+include setup.py
+include setupegg.py
+include zmqversion.py
+include buildutils.py
+
+graft docs
+prune docs/build
+prune docs/gh-pages
+
+graft examples
+graft zmq
+graft perf
+
+exclude setup.cfg
+exclude zmq/libzmq*
+# exclude docs/_static
+# exclude docs/_templates
+
+global-exclude *.so
+global-exclude *.pyd
+global-exclude *.pyc
+global-exclude .git*
+global-exclude .DS_Store
+global-exclude .mailmap
+
